@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Learning Composable Behavior Embeddings for Long-horizon Visual Navigation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/justified-nav.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead">
+        <nav>
+          <ul class="nav nav-justified">
+            <li><a href="index.html">Home</a></li>
+	    <li class="active"><a href="#">Videos</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr>
+
+      <div class="jumbotron">
+        <div class="row">
+	  <div class="col">
+            <h2 align="center">
+              RA-L 2021 Video Supplementary Material
+            </h2>
+	    <video width="100%" controls>
+	      <source src="videos/submission.mp4" type="video/mp4">
+	        Your browser does not support the video tag.
+	    </video>
+	  </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+	  <div class="col">
+            <h2 align="center">
+              Real Experiments
+            </h2>
+            <p align="justify">
+              Note that for these real experiments we do not perform any additional finetuning of the model.
+              Credits to Kyle Zhang for conducting these real experiments!
+            </p>
+
+            <h3> Obstacle avoidance </h3>
+            This video shows that the learned embedding is robust to unseen obstacles.
+            <video width="100%" controls>
+	      <source src="videos/1_3_obstacle.mp4" type="video/mp4">
+	        Your browser does not support the video tag.
+	    </video>
+            <h3> Generalization to novel navigation tasks </h3>
+            This video shows that we can combine embeddings from multiple experiences to generalize to novel navigation
+            tasks.
+            <video width="100%" controls>
+	      <source src="videos/2_6.mp4" type="video/mp4">
+	        Your browser does not support the video tag.
+	    </video>
+	  </div>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

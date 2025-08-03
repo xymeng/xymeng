@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Xiangyun Meng</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <style>
+    hr {
+    margin-top:40px;
+    margin-bottom:40px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="page-header">
+	<div class="row">
+	  <div class="col-md-10">
+	    <h1>Xiangyun Meng</h1>
+	    <p>
+	      Paul G. Allen School of Computer Science and Engineering, University of Washington
+	    </p>
+	    <p>
+	      3800 E Stevens Way NE, Seattle WA 98195
+	    </p>
+	    <p>
+	      xiangyun (at) cs (dot) washington (dot) edu
+	    </p>
+	    <a href="resume.pdf">CV</a>
+	  </div>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col-lg-2">
+	  <ul class="nav">
+	    <li role="presentation"><a href="#bio">Short Bio</a></li>
+	    <li role="presentation"><a href="#projects">Projects</a></li>
+	    <li role="presentation"><a href="#publications">Publications</a></li>
+	  </ul>
+	</div>
+	<div class="col-lg-10">
+	  <div id="bio">
+	    <h2>Short Bio</h2>
+	    <p>
+	      I obtained my bachelor degree from National University
+	      of Singapore (NUS). Currently I am a PhD
+	      candidate at University of Washington under Prof. Dieter
+	      Fox.
+	    </p>
+	  </div>
+
+	  <div id="bio">
+	    <h2>Research Interests</h2>
+	    <p>
+	      My research interests are in robot perception, planning and control. I am especially interested in
+              developing algorithms and representations to seamlessly connect perception, planning and control to
+              improve the capability and robustness of robots in the open world.
+            </p>
+            <p>
+              I have worked on several aspects of this theme in the context of robot navigation, agile locomotion, and
+              manipulation. On the perception front, I have worked on scene representation for off-road driving and
+              domain adaptation to improve generalization. For planning, I developed compact topological world models
+              that do not require accurate geometric mapping. For control, I connect learning and physics, e.g. using
+              imitation learning to learn controllers from vision, and using reinforcement learning to learn agile
+              quadrupedal locomotion skills.
+	    </p>
+            <p>
+              My focus has always been robust execution in the open world with minimum assumptions. Hence, having
+              large-scale datasets for training has been crucial. Due to the steep cost of collecting world data, I
+              invest in scaling up low-cost, high-quality data generation using photorealistic simulators, such as
+              Gibson and Isaac Sim. I believe it will eventually allow us to train robots in simulation and deploy them
+              in the real world. It also enables large-scale reproducible evaluation to find corner cases, a key
+              aspect to improve the robustness of the robot, and make them safe and predictable in the real world.
+            </p>
+	  </div>
+
+	  <hr>
+
+	  <div id="projects">
+            <h2> Latest Projects </h2>
+
+            <h3 class="text-center">Robotic Autonomy in Complex Environments with Resiliency (RACER)</h3>
+            <div class="row">
+              <div class="col-lg-6">
+		<img src="https://www.darpa.mil/DDM_Gallery/dsc-0507-619.jpg" class="img-rounded img-responsive center-block">
+              </div>
+              <div class="col-lg-6">
+                <p>
+                  <a href="https://www.darpa.mil/news-events/2022-09-16">[news]</a>
+                  <a href="https://racer.cs.washington.edu">[website]</a>
+                  <a href="https://www.youtube.com/watch?v=AlNOzhza7pg&ab_channel=UniversityofWashingtonRobotLearningLab">[promotional video]</a>
+                  I am one of the perception leads of the UW RACER team. We are developing a self-driving system
+                  that enables a passenger-size vehicle to drive aggressively on complex terrain. We
+                  are conducting cutting-edge research in robotics and computer vision, and developing practical
+                  methods that enable a real vehicle to navigate at high speed in complex environments.
+                </p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h3 class="text-center">V-STRONG: Visual Self-Supervised Traversability Learning for Off-road Navigation</h3>
+            <h4 class="text-center">Sanghun Jung, JoonHo Lee, Xiangyun Meng, Byron Boots, and Alexander Lambert</h4>
+            <h4 class="text-center" style="margin-bottom:40px">ICRA 2024</h4>
+
+            <div class="row">
+              <div class="col-lg-6">
+		<img src="vstrong/intro.png" class="img-rounded img-responsive center-block">
+              </div>
+              <div class="col-lg-6">
+                <p>
+		  <a href="https://arxiv.org/pdf/2303.15771.pdf">[paper]</a> We show how SAM (Segment Anything Model)
+                  can predict high-fidelity traversability maps from human driving. The key intuition is to leverage the
+                  masks produced by SAM as object priors. This allows us to sample positive and negative regions with
+                  object boundaries in mind, producing crispier traversability maps.
+                </p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h3 class="text-center">CAJun: Continuous Adaptive Jumping using a Learned Centroidal Controller</h3>
+            <h4 class="text-center">Yuxiang Yang, Guanya Shi, Xiangyun Meng, Wenhao Yu, Tingnan Zhang, Jie Tan, Byron Boots</h4>
+            <h4 class="text-center" style="margin-bottom:40px">CoRL 2023</h4>
+
+            <div class="row">
+              <div class="col-lg-6">
+		<img src="cajun/intro.gif" class="img-rounded img-responsive center-block">
+              </div>
+              <div class="col-lg-6">
+                <p>
+		  <a href="https://arxiv.org/pdf/2306.09557.pdf">[paper]</a>
+                  <a href="https://yxyang.github.io/cajun/">[website]</a> CAJun is a novel hierarchical learning and
+                  control framework that enables legged robots to jump continuously with adaptive jumping
+                  distances. With just 20 minutes of training on a single GPU, CAJun can achieve continuous, long jumps
+                  with adaptive distances on a Go1 robot with small sim-to-real gaps.
+                </p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h3 class="text-center">TerrainNet: Visual Modeling of Complex Terrains for High-speed, Off-road Navigation</h3>
+            <h4 class="text-center">Xiangyun Meng, Nathan Hatch, Alexander Lambert, Anqi Li, Nolan Wagener, Matthew Schmittle, JoonHo Lee, Wentao Yuan, Zoey Chen, Samuel Deng, Greg Okopal, Dieter Fox, Byron Boots, Amirreza Shaban</h4>
+            <h4 class="text-center" style="margin-bottom:40px">RSS 2023</h4>
+
+            <div class="row">
+              <div class="col-lg-6">
+		<img src="terrainnet/intro.jpg" class="img-rounded img-responsive center-block">
+              </div>
+              <div class="col-lg-6">
+                <p>
+		  <a href="https://arxiv.org/pdf/2303.15771.pdf">[paper]</a> TerrainNet learns to predict multi-layer
+                  terrain semantics and elevation features from multiple stereo cameras in a temporally consistent
+                  manner. It is fast and works well with off-the-shelf planners. It serves as one of the critical
+                  components in our autonomous driving stack in the DARPA RACER challenge.
+                </p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h3 class="text-center">Learning Semantic-Aware Locomotion Skills from Human Demonstration</h3>
+            <h4 class="text-center">Yuxiang Yang, Xiangyun Meng, Wenhao Yu, Tingnan Zhang, Jie Tan, Byron Boots</h4>
+            <h4 class="text-center" style="margin-bottom:40px">CoRL 2022</h4>
+
+            <div class="row">
+              <div class="col-lg-6">
+		<img src="semlocomotion/intro.gif" class="img-rounded img-responsive center-block">
+              </div>
+              <div class="col-lg-6">
+                <p>
+		  <a href="https://arxiv.org/pdf/2206.13631">[paper]</a>
+                  <a href="https://ai.googleblog.com/2022/09/learning-to-walk-in-wild-from-terrain.html">[blog]</a> The
+                  semantics of the environment, such as the terrain type and property, reveals important information for
+                  legged robots to adjust their behaviors. In this work, we present a framework that learns
+                  semantics-aware locomotion skills from perception for quadrupedal robots, such that the robot can
+                  traverse through complex offroad terrains with appropriate speeds and gaits using perception
+                  information. Due to the lack of high-fidelity outdoor simulation, our framework needs to be trained
+                  directly in the real world, which brings unique challenges in data efficiency and safety. To ensure
+                  sample efficiency, we pre-train the perception model with an off-road driving dataset. To avoid the
+                  risks of real-world policy exploration, we leverage human demonstration to train a speed policy that
+                  selects a desired forward speed from camera image. For maximum traversability, we pair the speed
+                  policy with a gait selector, which selects a robust locomotion gait for each forward speed. Using only
+                  40 minutes of human demonstration data, our framework learns to adjust the speed and gait of the robot
+                  based on perceived terrain semantics, and enables the robot to walk over 6km without failure at
+                  close-to-optimal speed.
+                </p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h3 class="text-center">Hierarchical Policies for Cluttered-Scene Grasping with Latent Plans</h3>
+            <h4 class="text-center">Lirui Wang, Xiangyun Meng, Yu Xiang, Dieter Fox</h4>
+            <h4 class="text-center" style="margin-bottom:40px">RAL + ICRA 2022</h4>
+
+            <div class="row">
+              <div class="col-lg-6">
+		<img src="https://github.com/liruiw/HCG/raw/master/assets/hcg.gif" class="img-rounded img-responsive center-block">
+              </div>
+              <div class="col-lg-6">
+                <p>
+		  <a href="https://arxiv.org/abs/2107.01518">[paper]</a>
+                  <a href="https://github.com/liruiw/HCG">[code]</a> 6D grasping in cluttered scenes is a longstanding
+                  problem in robotic manipulation. Open-loop manipulation pipelines may fail due to inaccurate state
+                  estimation, while most end-to-end grasping methods have not yet scaled to complex scenes with
+                  obstacles. In this work, we propose a new method for end-to-end learning of 6D grasping in cluttered
+                  scenes.  Our hierarchical framework learns collision-free target-driven grasping based on partial
+                  point cloud observations. We learn an embedding space to encode expert grasping plans during training
+                  and a variational autoencoder to sample diverse grasping trajectories at test time. Furthermore, we
+                  train a critic network for plan selection and an option classifier for switching to an instance
+                  grasping policy through hierarchical reinforcement learning. We evaluate our method and compare
+                  against several baselines in simulation, as well as demonstrate that our latent planning can
+                  generalize to real-world cluttered-scene grasping tasks.
+                </p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h3 class="text-center">Semantic Terrain Classification for Off-road Autonomous Driving</h3>
+            <h4 class="text-center">Amirreza Shaban∗, Xiangyun Meng∗, JoonHo Lee∗, Byron Boots, Dieter Fox</h4>
+            <h5 class="text-center">∗Equal Contribution</h5>
+            <h4 class="text-center" style="margin-bottom:40px">CoRL 21</h4>
+
+            <div class="row">
+              <div class="col-lg-6">
+		<img src="corl21/images/intro.png" class="img-rounded img-responsive center-block">
+              </div>
+              <div class="col-lg-6">
+                <p>
+		  <a href="https://openreview.net/pdf?id=AL4FPs84YdQ">[paper]</a>
+                  <a href="https://sites.google.com/view/terrain-traversability/home#h.esrg71olrgxo">[website]</a>
+                  <a href="https://github.com/JHLee0513/semantic_bevnet">[code]</a> Producing dense and accurate
+                  traversability maps is crucial for autonomous off-road navigation. In this paper, we focus on the
+                  problem of classifying terrains into 4 cost classes (free, low-cost, medium-cost, obstacle) for
+                  traversability assessment. This requires a robot to reason about both semantics (what objects are
+                  present?) and geometric properties (where are the objects located?) of the environment. To achieve
+                  this goal, we develop a novel Bird’s Eye View Network (BEVNet), a deep neural network that directly
+                  predicts a local map encoding terrain classes from sparse LiDAR inputs. BEVNet processes both
+                  geometric and semantic information in a temporally consistent fashion. More importantly, it uses
+                  learned prior and history to predict terrain classes in unseen space and into the future, allowing a
+                  robot to better appraise its situation. We quantitatively evaluate BEVNet on both on-road and off-road
+                  scenarios and show that it outperforms a variety of strong baselines.
+                </p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h3 class="text-center">Learning Composable Behavior Embeddings for Long-horizon
+              Visual Navigation</h3>
+            <h4 class="text-center">Xiangyun Meng, Yu Xiang and Dieter Fox</h4>
+            <h4 class="text-center" style="margin-bottom:40px">RA-L and ICRA 2021</h4>
+
+            <div class="row">
+              <div class="col-lg-6">
+		<img src="ral21/images/intro.png" class="img-rounded img-responsive center-block">
+              </div>
+              <div class="col-lg-6">
+                <p>
+		  <a href="https://arxiv.org/pdf/2102.09781.pdf">[paper]</a>
+                  <a href="ral21/">[website]</a>
+                  <a href="https://github.com/xymeng/rmp_nav/tree/master/cbe">[code]</a> Learning high-level navigation
+                  behaviors has important implications: it enables robots to build compact visual memory for repeating
+                  demonstrations and to build sparse topological maps for planning in novel environments. Existing
+                  approaches only learn discrete, short-horizon behaviors. These standalone behaviors usually assume a
+                  discrete action space with simple robot dynamics, thus they cannot capture the intricacy and
+                  complexity of real-world trajectories. To this end, we propose Composable Behavior Embedding (CBE), a
+                  continuous behavior representation for long-horizon visual navigation. CBE is learned in an end-to-end
+                  fashion; it effectively captures path geometry and is robust to unseen obstacles. We show that CBE can
+                  be used to performing memory-efficient path following and topological mapping, saving more than an
+                  order of magnitude of memory than behavior-less approaches.
+                </p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h3 class="text-center">Scaling
+              Local Control to Large Scale Topological Navigation </h3>
+            <h4 class="text-center">Xiangyun Meng, Nathan Ratliff, Yu Xiang and Dieter Fox</h4>
+            <h4 class="text-center" style="margin-bottom:40px">ICRA 2020</h4>
+
+            <div class="row">
+              <div class="col-lg-6">
+		<img src="topological_nav/images/intro2.jpg" class="img-rounded img-responsive center-block">
+              </div>
+              <div class="col-lg-6">
+                <p>
+		  <a href="https://arxiv.org/pdf/1909.12329.pdf">[paper]</a>
+                  <a href="topological_nav/">[website]</a>
+                  <a href="https://github.com/xymeng/rmp_nav">[code]</a>
+                  Visual topological navigation has been revitalized
+                  recently thanks to the advancement of deep learning
+                  that substantially improves robot
+                  perception. However, the scalability and reliability
+                  issue remain challenging due to the complexity and
+                  ambiguity of real world images and mechanical
+                  constraints of real robots. We present an intuitive
+                  solution to show that by accurately measuring the
+                  capability of a local controller, large-scale visual
+                  topological navigation can be achieved while being
+                  scalable and robust. Our approach achieves
+                  state-of-the-art results in trajectory following and
+                  planning in large-scale environments. It also
+                  generalizes well to real robots and new environments
+                  without finetuning.
+                </p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h3 class="text-center">Neural
+              Autonomous Navigation with Riemannian Motion Policy </h3>
+            <h4 class="text-center">Xiangyun Meng, Nathan Ratliff, Yu Xiang and Dieter Fox</h4>
+            <h4 class="text-center" style="margin-bottom:40px">ICRA 2019</h4>
+
+            <div class="row">
+              <div class="col-lg-6">
+		<img src="neural_rmp/images/intro.jpg" class="img-rounded img-responsive center-block">
+              </div>
+              <div class="col-lg-6">
+                <p>
+		  <a href="https://arxiv.org/abs/1904.01762">[paper]</a>
+                  <a href="neural_rmp/">[website]</a>
+                  <a href="https://github.com/xymeng/rmp_nav">[code]</a>
+                  End-to-end learning for autonomous navigation has received
+                  substantial attention recently as a promising method for
+                  reducing modeling error. However, its data complexity,
+                  especially around generalization to unseen environments,
+                  is high. We introduce a novel image-based autonomous
+                  navigation technique that leverages in policy structure
+                  using the Riemannian Motion Policy (RMP) framework for
+                  deep learning of vehicular control. We design a deep
+                  neural network to predict control point RMPs of the
+                  vehicle from visual images, from which the optimal control
+                  commands can be computed analytically. We show that our
+                  network trained in the Gibson environment can be used for
+                  indoor obstacle avoidance and navigation on a real RC car,
+                  and our RMP representation generalizes better to unseen
+                  environments than predicting local geometry or predicting
+                  control commands directly.
+                </p>
+              </div>
+            </div>
+
+            <hr>
+
+            <h2> Fun Projects </h2>
+            <h3 class="text-center" style="margin-bottom:20px">A
+            baseball bot trained in simulation using RL and
+            transferred to a real PR2 robot</h3>
+            <div class="row">
+              <div class="col-lg-8">
+         	<video width="100%" poster="imgs/real.png" controls>
+                  <source src="videos/baseball_bot.mp4" type="video/mp4">
+	            Your browser does not support the video
+	            tag.
+	        </video>
+              </div>
+              <div class="col-lg-4">
+                <p>
+                  A neural policy enabling a 7-DoF robotic arm (the
+                  PR2 robot) to hit a high-speed ball (&gt;8m/s)
+                  thrown at it, learned without supervision.
+                </p>
+                <p>
+                  Policy is first learned through Reinforcement
+                  Learning in the MuJoCo simulator and later
+                  transferred to the real robot.
+                </p>
+                <p>
+                  Real robot uses 30Hz depth images to estimate ball
+                  states. From the ball is thrown till the ball hits
+                  the robot, the robot only has about 0.3 seconds to
+                  react.
+                </p>
+                <p>
+                  Surprisingly, the robot also learns to act like a
+                  Jedi!
+                </p>
+                <p>
+                  Joint work with Boling Yang and Felix Leeb.
+                </p>
+              </div>
+            </div>
+
+            <hr>
+
+	    <h2>Pre-PhD Research Projects</h2>
+
+	    Most of the projects have a seperated web page showing more
+	    details (demo, images, videos, etc.). Enjoy!
+
+
+	    <h3 class="text-center">SkyStitch</h3>
+            <h4 class="text-center" style="margin-bottom:40px">ACM Multimedia 2015</h4>
+
+	    <div class="row">
+	      <div class="col-lg-6">
+		<img src="imgs/skystitch.jpg" class="img-rounded img-responsive center-block">
+	      </div>
+	      <div class="col-lg-6">
+
+		<p>
+		  SkyStitch is a multi-UAV based video surveillance
+		  system. Compared with a traditional video surveillance system
+		  that captures videos with a single camera, SkyStitch removes
+		  the constraints of field of view and resolution by deploying
+		  multiple UAVs to cover the target area. Videos captured from
+		  all UAVs are streamed to the ground station, which are
+		  stitched together to provide a panoramic view of the area in
+		  real time.
+		</p>
+		<p>
+		  This is the biggest project I have ever accomplished. It
+		  consists of 16k lines of high-optimized code running on
+		  hetrogeneous processors (x86 & ARM CPU, desktop & mobile
+		  GPU, microcontroller on the flight controller,
+		  etc.). Moreover, there is tons of mechanical work to
+		  do. We built 4 generations of prototypes and had to deal
+		  with numerous number of crashes.
+		</p>
+		<p>
+		  More information can be found on the
+		  <a href="skystitch/">project
+		    webpage</a>.
+		</p>
+
+	      </div>
+	    </div>
+	  </div>
+
+      <hr>
+
+      <!--     <div> -->
+      <!--       <h2>Other Projects</h2> -->
+
+      <!--       <h3 class="text-center" style="margin-bottom:40px">Robotic Segway</h3> -->
+
+      <!--       <div class="row"> -->
+      <!--         <div class="col-lg-6"> -->
+      <!--   	<img src="imgs/segway.jpg" class="img-rounded img-responsive center-block"> -->
+      <!--         </div> -->
+      <!--         <div class="col-lg-6"> -->
+      <!--   	<p> -->
+      <!--   	  This robotic segway is capable of balancing with two -->
+      <!--   	  wheels. It can be controlled wirelessly from a PC or by a PS3 -->
+      <!--   	  game controller. I started this project back in 2011 when I -->
+      <!--   	  was in my first year. I built everything from scratch, -->
+      <!--   	  including all the machining work (My father lent me a hand). -->
+      <!--   	</p> -->
+      <!--   	<p> -->
+      <!--   	  The experience has been very rewarding. The state estmation -->
+      <!--   	  algorithm inspired me to adopt it for homography estimation in -->
+      <!--   	  my SkyStitch project. -->
+      <!--   	</p> -->
+      <!--   	<p> More information can be found on -->
+      <!--   	  the <a href="segway3r/gallery/">project webpage</a>. -->
+      <!--           </p> -->
+      <!--         </div> -->
+      <!--       </div> -->
+
+      <!--       <hr> -->
+
+      <!--       <h3 class="text-center" style="margin-bottom:40px">Hedgewars JS</h3> -->
+
+      <!--       <div class="row"> -->
+      <!--         <div class="col-lg-6"> -->
+      <!--   	<img style="width:640px" src="imgs/hedgewars.png" class="img-rounded img-responsive center-block"> -->
+      <!--         </div> -->
+      <!--         <div class="col-lg-6"> -->
+      <!--   	<p> -->
+      <!--   	  Web technology has been advancing rapidly in recent years -->
+      <!--   	  and there is a concern of porting existing native -->
+      <!--   	  applications to browsers to attract more users and reduce -->
+      <!--   	  development cost. This project ports a Pascal game -->
+      <!--   	  Hedgewars (<a href="hedgewars.org">hedgewars.org</a>) into -->
+      <!--   	  web browser. I worked on a parser to convert Pascal source -->
+      <!--   	  code into C and then used Emscripten to translate C into -->
+      <!--   	  JavaScript. Finally, a cross-compilation toolchain is -->
+      <!--   	  developed to make the process as easy as doing a native -->
+      <!--   	  build. -->
+      <!--   	</p> -->
+      <!--   	<p> -->
+      <!--   	  There are many interesting aspects in this project, -->
+      <!--   	  including how to convert Pascal source code into C and -->
+      <!--   	  how to make it compatible with WebGL and non-blocking -->
+      <!--   	  IO. I wrote a report to discuss some related technical -->
+      <!--   	  details. -->
+      <!--   	</p> -->
+      <!--   	<p> Below is a link to the live demo of the cross -->
+      <!--   	  compiled game. However, since this project was done -->
+      <!--   	  back in 2012 and some javascript APIs have already -->
+      <!--   	  changed, you need to download an old Firefox or -->
+      <!--   	  Chrome browser to run it. -->
+      <!--   	</p> -->
+      <!--   	<p> -->
+      <!--   	  <a href="http://www.comp.nus.edu.sg/~xiangyun/hwjs/hwjs.html"> -->
+      <!--   	    http://www.comp.nus.edu.sg/~xiangyun/hwjs/hwjs.html -->
+      <!--   	  </a> -->
+      <!--   	</p> -->
+      <!--   	<p> -->
+      <!--   	  Firefox 17.0: -->
+      <!--   	  <a href="https://ftp.mozilla.org/pub/firefox/releases/17.0b6"> -->
+      <!--   	    https://ftp.mozilla.org/pub/firefox/releases/17.0b6/ -->
+      <!--   	  </a> -->
+      <!--   	</p> -->
+      <!--         </div> -->
+      <!--       </div> -->
+      <!--     </div> -->
+
+      <!--     <hr> -->
+
+      <!--   <\!-- jQuery (necessary for Bootstrap's JavaScript plugins) -\-> -->
+      <!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+      <!--   <\!-- Include all compiled plugins (below), or include individual files as needed -\-> -->
+      <!--   <script src="js/bootstrap.min.js"></script> -->
+      </div>
+  </body>
+</html>

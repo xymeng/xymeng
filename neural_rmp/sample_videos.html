@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Neural Autonomous Navigation with Riemannian Motion Policy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/justified-nav.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead">
+        <nav>
+          <ul class="nav nav-justified">
+            <li><a href="index.html">Home</a></li>
+	    <li class="active"><a href="#">Videos</a></li>
+            <li><a href="publications.html">Publications</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <hr>
+
+      <div class="row">
+	<div class="col">
+          <h4>
+            <strong>ICRA 2019 Video Supplementary Material</strong>
+            This video explains the intuitions behind RMP and a RMP
+            model designed for an Ackermann steering vehicle. It
+            compares RMP with direct prediction of laser scan and
+            control command in the Gibson simulation
+            environment. Finally it demonstrates real-world navigation
+            and obstacle avoidance behavior.
+          </h4>
+	  <video width="100%" controls>
+	    <source src="videos/submission.mp4" type="video/mp4">
+	      Your browser does not support the video tag.
+	  </video>
+	</div>
+      </div>
+
+      <div class="row">
+	<div class="col">
+          <h4>
+            <strong>A Complete Navigation Trace</strong> This video
+            shows a complete navigation trace using our neural RMP
+            model. The input to the model is a 224x224 color image
+            shown in the top right corner. A simple A* planner
+            provides waypoints (shown as blue circle). Note that the
+            planner only provides a greedy path so naively following
+            it would cause collisions. Our neural RMP model takes the
+            surrounding obstacles into consideration and hence only
+            uses the waypoint as a hint and does not follow it
+            blindly. The control commands (velocity and steering
+            angle) are computed from the kinematic model of the
+            vehicle. Though not shown here, our neural RMP model can
+            naturally handle dynamic obstacles observed by the camera
+            as shown in the first video.
+          </h4>
+	  <video width="100%" controls>
+	    <source src="videos/navigation_trimmed.mp4" type="video/mp4">
+	      Your browser does not support the video tag.
+	  </video>
+	</div>
+      </div>
+
+    </div> <!-- /container -->
+    
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
